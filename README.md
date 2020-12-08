@@ -1,9 +1,9 @@
 Implement a FIFO Queue of unsigned char and written test cases for the same. I have implemented the following functions for the FIFO Queue of unsigned characters. 
 
-Q* create_queue() //creates a FIFO Byte Queue returning a handle to it.
-Void destroy_queue(Q* q) //Destroy a previously created queue
-Void enqueue_byte(Q* q, unsigned char b) //Adds a new byte to the queue
-Unsigned char dequeue_byte(Q* q) //pops the next byte off the queue.
+Q* create_queue() //creates a FIFO Byte Queue returning a handle to it.<br>
+Void destroy_queue(Q* q) //Destroy a previously created queue.<br>
+Void enqueue_byte(Q* q, unsigned char b) //Adds a new byte to the queue.<br>
+Unsigned char dequeue_byte(Q* q) //pops the next byte off the queue.<br>
 
 If the functions run out of memory, it will call this function (which you may define/override):
                   void on_out_of_memory();
