@@ -38,38 +38,38 @@ Verify that the size of the new queue is equal to the number of padding bytes th
 
 3. Enqueue a byte to the queue
 
-3.1 Before the queue can be enqueued, verify that the queue is not null.
+3.1 Before the queue can be enqueued, verify that the queue is not null.<br>
 3.2 If the queue is not null, verify that the queue size is less than the total available memory space, to make sure there is room to add a byte.
 
 4. Test Case: Enqueue Byte:
 
-4.1 Verify that the byte is enqueued to the queue as expected. This is done by verifying that after the enqueue operation the byte present at the rear of the queue is the same as the byte inserted.
-4.2 Verify that the bytesUsed variable that represents the bytes in use by the memory is increased by one.
-4.3 Verify that the queue size is increased by one.
-4.4 Verify the enqueue byte operation for invalid data.
+4.1 Verify that the byte is enqueued to the queue as expected. This is done by verifying that after the enqueue operation the byte present at the rear of the queue is the same as the byte inserted.<br>
+4.2 Verify that the bytesUsed variable that represents the bytes in use by the memory is increased by one.<br>
+4.3 Verify that the queue size is increased by one.<br>
+4.4 Verify the enqueue byte operation for invalid data.<br>
 
 
 5. Test Case: Before a byte is dequeued from the queue
 
-5.1 Before a byte can be dequeued from the queue, Verify that the queue is not null.
-5.2 Before the queue can be dequeued, Verify that the queue is not an empty queue with nothing to be dequeued.
+5.1 Before a byte can be dequeued from the queue, Verify that the queue is not null.<br>
+5.2 Before the queue can be dequeued, Verify that the queue is not an empty queue with nothing to be dequeued.<br>
 
 6. Test Case: Dequeue a byte from the queue, After the dequeue operation,
 
-6.1 Verify that the bytesUsed variable is decremented by one.
-6.2 Verify that the queue size is decremented by one.
-6.3 The offset variable indicates the location in the memory where the new queue will be stored. Verify that the offset variable is incremented by four.
-6.4 Verify that the character returned from the dequeue operation is as expected.
+6.1 Verify that the bytesUsed variable is decremented by one.<br>
+6.2 Verify that the queue size is decremented by one.<br>
+6.3 The offset variable indicates the location in the memory where the new queue will be stored. Verify that the offset variable is incremented by four.<br>
+6.4 Verify that the character returned from the dequeue operation is as expected.<br>
 
 7. Test Case: Before the queue is destroyed,
 
-7.1 Verify that the queue is not null.
-7.2 Verify that the queue to be destroyed is an allocated queue in the memory.
+7.1 Verify that the queue is not null.<br>
+7.2 Verify that the queue to be destroyed is an allocated queue in the memory.<br>
 
 8. Test Case: Destroy Queue: After the queue is destroyed.
 
-8.1: Verify that the bytesUSed variable is decremented by the size of the destroyed queue.
-8.2 The unusedQueue variable represents that the queue has not been allocated. Verify that the queue is assigned as an unused queue.
+8.1: Verify that the bytesUSed variable is decremented by the size of the destroyed queue.<br>
+8.2 The unusedQueue variable represents that the queue has not been allocated. Verify that the queue is assigned as an unused queue.<br>
 
-9. Test Case: Verify that the functionality of on_out_of_memory() is as expected.
-10. Test Case: Verify that the functionality of on_illegal_opeartion() is as expected.
+9. Test Case: Verify that the functionality of on_out_of_memory() is as expected.<br>
+10. Test Case: Verify that the functionality of on_illegal_opeartion() is as expected.<br>
