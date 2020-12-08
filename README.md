@@ -1,28 +1,28 @@
 Implement a FIFO Queue of unsigned char and written test cases for the same. I have implemented the following functions for the FIFO Queue of unsigned characters. 
 
-Q* create_queue() //creates a FIFO Byte Queue returning a handle to it.<br>
-Void destroy_queue(Q* q) //Destroy a previously created queue.<br>
-Void enqueue_byte(Q* q, unsigned char b) //Adds a new byte to the queue.<br>
-Unsigned char dequeue_byte(Q* q) //pops the next byte off the queue.<br>
+Q* create_queue() //creates a FIFO Byte Queue returning a handle to it.<br><br>
+Void destroy_queue(Q* q) //Destroy a previously created queue.<br><br>
+Void enqueue_byte(Q* q, unsigned char b) //Adds a new byte to the queue.<br><br>
+Unsigned char dequeue_byte(Q* q) //pops the next byte off the queue.<br><br>
 
-If the functions run out of memory, it will call this function (which you may define/override):
-                  void on_out_of_memory();
-If the caller makes an illegal request, it will call this function (which you may define/override):
-                void on_illegal_operation();
+If the functions run out of memory, it will call this function (which you may define/override):<br>
+                  void on_out_of_memory();<br>
+If the caller makes an illegal request, it will call this function (which you may define/override):<br>
+                void on_illegal_operation();<br>
 
-The specifications also require that the implementation
-• uses no more than 2048 bytes to implement all byte queues, and
-• must support 15 queues with an average of 80 or so bytes in each queue.
+The specifications also require that the implementation<br>
+• uses no more than 2048 bytes to implement all byte queues, and<br>
+• must support 15 queues with an average of 80 or so bytes in each queue.<br>
 
-I have chosen the Google testing framework for testing the code for this implementation. I have chosen Google Test for the following reasons.
+I have chosen the Google testing framework for testing the code for this implementation. I have chosen Google Test for the following reasons.<br>
 
-1. Similar test cases can be grouped together under one test that can share data and test routines. This makes the test more organized and reflects the structure of the tested code.
-Test cases are independent of each other which makes debugging easy.
-2. Test cases are portable and reusable, Google Test work with different operating systems and compilers (MSVC, GCC, etc) chance it can be used with a variety of configurations. 
-3. Test cases can be divided as fatal (ASSERT_*) and non-fatal (EXPECT_*) failures so as to manipulate the test case execution. On failure, the google test only stops the current test and continues to the next. On non-fatal failure, the current test continues. Thus multiple failures can be reported on a single edit-compile-test cycle.
-4. Google Test automatically detects your tests and doesn’t require you to enumerate them in order to run them.
+1. Similar test cases can be grouped together under one test that can share data and test routines. This makes the test more organized and reflects the structure of the tested code.<br>
+2. Test cases are independent of each other which makes debugging easy.<br>
+3. Test cases are portable and reusable, Google Test work with different operating systems and compilers (MSVC, GCC, etc) chance it can be used with a variety of configurations. <br>
+4. Test cases can be divided as fatal (ASSERT_*) and non-fatal (EXPECT_*) failures so as to manipulate the test case execution. On failure, the google test only stops the current test and continues to the next. On non-fatal failure, the current test continues. Thus multiple failures can be reported on a single edit-compile-test cycle.<br>
+5. Google Test automatically detects your tests and doesn’t require you to enumerate them in order to run them.<br>
 
-I have written 22 Tests from 10 Test Cases. Following are the details of Test Cases.
+I have written 22 Tests from 10 Test Cases. Following are the details of Test Cases.<br>
 
 1. Test Case: Before the queue is created.
 
